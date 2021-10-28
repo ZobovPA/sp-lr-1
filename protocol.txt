@@ -6,7 +6,7 @@ Computer name: DESKTOP-KOS0UIE
 
 \\?\Volume{82f2a8a0-dfa5-4e67-b63a-96c3b233e058}\
   First path: C:\Total size (bytes): 106727579648
-Free space (bytes): 23504420864
+Free space (bytes): 23374405632
 
 \\?\Volume{7772845d-6848-4b0f-8501-bf49444e1fb4}\
   First path: Total size (bytes): 523235328
@@ -14,7 +14,7 @@ Free space (bytes): 88469504
 
 \\?\Volume{f0f0d439-e330-4414-bd02-2412c7d573b9}\
   First path: Total size (bytes): 404734603264
-Free space (bytes): 279968849920
+Free space (bytes): 279968743424
 
 \\?\Volume{4f38a904-5db4-4456-9e32-68ba1b3cb276}\
   First path: Total size (bytes): 100663296
@@ -26,11 +26,8 @@ Startup commands:
       2: Wargaming.net Game Center:  "C:\ProgramData\Wargaming.net\GameCenter\wgc.exe" --background
 
 Frequency = 10000000 Hz
-Performance duration = 0.600000 us
+Performance duration = 0.500000 us
 
-Process returned 0 (0x0)   execution time : 0.132 s
+Process returned 0 (0x0)   execution time : 0.094 s
 Press any key to continue.
-
-
-
 

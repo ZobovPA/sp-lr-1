@@ -54,7 +54,7 @@ int main()
     char buffer[MAX_PATH];
     DWORD  cchBufferLength = MAX_PATH;
     char Names[MAX_PATH];
-    __int64 total, available, free;
+    ULARGE_INTEGER total, available, free;
 
 
     HANDLE search = FindFirstVolume(buffer, sizeof(buffer));
@@ -63,11 +63,6 @@ int main()
         printf("\n%s", buffer);
         GetVolumePathNamesForVolumeName(buffer, Names, cchBufferLength, &cchBufferLength);
         printf("\n  First path: %s", Names);
-        GetDiskFreeSpaceEx(
-                           buffer,
-                           (PULARGE_INTEGER)&available,
-                           (PULARGE_INTEGER)&total,
-                           (PULARGE_INTEGER)&free);
 
         if (GetDiskFreeSpaceEx(
                                buffer,
@@ -96,11 +91,11 @@ int main()
     DWORD In = 0;
     DWORD retCode;
     DWORD Pblen = 32767;
-    PPERF_DATA_BLOCK PerfData = (PPERF_DATA_BLOCK)malloc(Pblen);
+    char PerfData = (PPERF_DATA_BLOCK)malloc(Pblen);
     DWORD cbData = Pblen;
 
     if (RegOpenKeyEx(HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Run",
-        0, KEY_ALL_ACCESS, &hKey) == !ERROR_SUCCESS)
+        0, KEY_ALL_ACCESS, &hKey) != ERROR_SUCCESS)
     {
         cout << "Function RegOpenKeyEx() failed!" << endl;
     }
